@@ -158,7 +158,9 @@
 
   /**
    * Accessing the details of a game from resp and fill the detail view with the
-   * title, image, link, cheapest price, and a suggestion line for that game.
+   * title, image, link, cheapest price, and a suggestion line for that game. All
+   * the images retrived from this function is from the steam website
+   * https://store.steampowered.com/.
    * @param {Object} resp - The Json object with data recieved on a specific game
    * by fetching.
    */
@@ -170,7 +172,7 @@
     img.src += information.steamAppID + "/header.jpg";
     img.alt = information.title;
     let link = gen("a");
-    link.href = "https://store.steampowered.com/app/"
+    link.href = "https://store.steampowered.com/app/";
     link.href += information.steamAppID;
     link.textContent = "Click this link to view the game in store.";
     link.target = "_blank";
@@ -190,7 +192,7 @@
    * @return {String} a string of url linking to a list of games.
    */
   function urlPreparerDeal() {
-    let url = BASE_URL + "deals?storeID=1&pageSize=30"
+    let url = BASE_URL + "deals?storeID=1&pageSize=30";
     let onSale = "&onSale=" + qs('input[type="radio"]:checked').value;
     let options = id("selecting");
     let sortBy = "&sortBy=" + options[options.selectedIndex].value;
@@ -243,7 +245,7 @@
    */
   function backToMain() {
     let information = qsa("#details-bar li");
-    for (let i=0; i < information.length; i++) {
+    for (let i = 0; i < information.length; i++) {
       information[i].innerHTML = "";
     }
     toggleViews();
