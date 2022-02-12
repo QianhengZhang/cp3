@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>cp3</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@700&family=Rubik&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Steam Sales Helper</h1>
+      <p>Made by Joshua Zhang</p>
+      <p>Today is <span id="date">current date</span></p>
+    </header>
+    <main>
+      <section id="deal-view">
+        <section id="top">
+          <section id="introduction">
+            <h2>Some Tips</h2>
+            <ol>
+              <li>This page shows you top 30<br>games on Sales in Steam.</li>
+              <li>Setting the search conditions<br>with any game you want.</li>
+              <li>Click the game to show more<br>store and price information</li>
+              <li>It may takes a while to load<br>new information, be patient</li>
+              <li>Thank you for using this page!</li>
+            </ol>
+          </section>
+          <hr>
+          <section id="buttons">
+            <div>
+              <h2>Search by name</h2>
+              <label>Enter key words here</label>
+              <input type="text" id="name" value=""><br>
+              <h2>Enter the range of price</h2>
+              <label>Lowest Price:</label>
+              <input type="text" id="lower" value="0"><br>
+              <label>Maxest Price:</label>
+              <input type="text" id="upper" value="30"><br><br>
+            </div>
+            <label>Order By</label>
+            <select>
+              <option value="dealRating" selected>Deal Rating</option>
+              <option value="savings">Best Discount</option>
+              <option value="metacritic">Metacritic Score</option>
+              <option value="reviews">Reviews</option>
+            </select>
+            <p>
+              <label><input type="radio" name="diff" value="1" checked>On Sale</label>
+              <label><input type="radio" name="diff" value="0">All Games</label>
+            </p>
+            <button id="search-btn">Search</button>
+          </section>
+        </section>
+        <hr>
+        <section>
+          <section id="current-view">
+          </section>
+        </section>
+      </section>
+      <section id="detail-view" class="hidden">
+        <div id="details-bar">
+          <h2 id="title"></h2>
+          <ul>
+            <li id="image"></li>
+            <br>
+            <li id="steam"></li>
+            <br>
+            <li id="cheapest"></li>
+            <br>
+            <li id="suggestion"></li>
+          </ul>
+        </div>
+        <button id="back-btn">Back to deal list</button>
+      </section>
+    </main>
+    <footer>
+      <p>
+        This page is supported by Cheap Shark API.<br>
+        All other attributions cited in page source.
+      </p>
+    </footer>
+  </body>
+</html>
