@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<!--
+  Name: Joshua Zhang
+  Date: February 11, 2022
+  Section: CSE 154 AB
+  This is the index.html page for my cp3 project. It has deals, introduction, and
+  details section for games on sale. The user can enter their own key words, price
+  range or even if the games are on sale to search for a specific game they want.
+  The user also can change the way games are ordered by different features.
+-->
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -14,32 +23,39 @@
       <p>Today is <span id="date">current date</span></p>
     </header>
     <main>
+      <!--
+        The deal view section is providing all the instruction and deal information to the user.
+      -->
       <section id="deal-view">
         <section id="top">
           <section id="introduction">
             <h2>Some Tips</h2>
             <ol>
-              <li>This page shows you top 30<br>games on Sales in Steam.</li>
-              <li>Setting the search conditions<br>with any game you want.</li>
-              <li>Click the game to show more<br>store and price information</li>
-              <li>It may takes a while to load<br>new information, be patient</li>
+              <li>This page shows you top 30 games on Sales in Steam.</li>
+              <li>Setting the search conditions with any game you want.</li>
+              <li>Click the game to show more store and price information</li>
+              <li>It may takes a while to load new information, be patient</li>
+              <li>The game might not be on sale if nothing show up.</li>
               <li>Thank you for using this page!</li>
             </ol>
           </section>
           <hr>
+          <!--
+            The buttons section provides all kinds of choices for searching a game.
+          -->
           <section id="buttons">
             <div>
               <h2>Search by name</h2>
-              <label>Enter key words here</label>
+              <label for="name">Enter key words here</label>
               <input type="text" id="name" value=""><br>
               <h2>Enter the range of price</h2>
-              <label>Lowest Price:</label>
+              <label for="lower">Lowest Price:</label>
               <input type="text" id="lower" value="0"><br>
-              <label>Maxest Price:</label>
+              <label for="upper">Maxest Price:</label>
               <input type="text" id="upper" value="30"><br><br>
             </div>
-            <label>Order By</label>
-            <select>
+            <label for="selecting">Order By</label>
+            <select id="selecting">
               <option value="dealRating" selected>Deal Rating</option>
               <option value="savings">Best Discount</option>
               <option value="metacritic">Metacritic Score</option>
@@ -54,10 +70,16 @@
         </section>
         <hr>
         <section>
+          <!--
+            The current view section contains all the game sales information.
+          -->
           <section id="current-view">
           </section>
         </section>
       </section>
+      <!--
+        The detail view section has some detail about the selected game.
+      -->
       <section id="detail-view" class="hidden">
         <div id="details-bar">
           <h2 id="title"></h2>
@@ -76,7 +98,8 @@
     </main>
     <footer>
       <p>
-        This page is supported by Cheap Shark API.<br>
+        This page is supported by <a href="https://apidocs.cheapshark.com/">Cheap Shark API.</a>
+        <br>
         All other attributions cited in page source.
       </p>
     </footer>

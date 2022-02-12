@@ -1,7 +1,20 @@
+/*
+  Name: Joshua Zhang
+  Date: February 11, 2022
+  Section: CSE 154 AB
+  This is the styles.css file used in cp3. It uses a picture of
+  milky river in space as the background and deep color background
+  for introductions and information. It sets up the games as flexbox
+  to allow better view of games' information and prices. It also
+  modifies the font and size of words and headings for a clear
+  and attracting theme.
+*/
 body {
   background-image: url("img/background.jpg");
-  /*This background image is retrived from
-  https://pixabay.com/photos/milky-way-stars-night-sky-night-2695569/*/
+  /*
+    This background image is retrived from
+    https://pixabay.com/photos/milky-way-stars-night-sky-night-2695569/
+  */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -60,8 +73,8 @@ p, li {
   background-color: #11468F;
   opacity: 85%;
   border-radius: 25px;
-  padding-left: 8%;
-  padding-right: 8%;
+  padding-left: 4%;
+  padding-right: 4%;
   padding-bottom: 2%;
   padding-top: 2%;
 }
@@ -111,6 +124,6 @@ header, #top, a:visited {
 }
 
 footer {
-  background-color: #D3DEDC;
+  background-color: #8A39E1;
   width: 100%;
 }
